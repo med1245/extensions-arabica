@@ -1,11 +1,11 @@
-package com.egybest
+package com.animezid
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
 import com.lagradost.cloudstream3.plugins.Plugin
 import android.content.Context
 
 @CloudstreamPlugin
-class EgyBestPlugin: Plugin() {
+class animezidPlugin: Plugin() {
     override fun load(context: Context) {
-        registerMainAPI(EgyBest())
+        registerMainAPI(animezid())
     }
 }

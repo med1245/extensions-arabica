@@ -1,4 +1,4 @@
-package com.egybest
+package com.animezid
 
 
 import android.annotation.TargetApi
@@ -37,8 +37,8 @@ fun String.runJS(variableName: String): String {
 
 class EgyBest : MainAPI() {
     override var lang = "ar"
-    override var mainUrl = "https://egybest.org"
-    override var name = "EgyBest"
+    override var mainUrl = "https://animezid.org"
+    override var name = "animezid"
 	var pssid = ""
     override val usesWebView = false
     override val hasMainPage = true
@@ -61,7 +61,7 @@ class EgyBest : MainAPI() {
         return MovieSearchResponse(
             title,
             mainUrl + url,
-            this@EgyBest.name,
+            this@animezid.name,
             tvType,
             posterUrl,
             year,
@@ -74,22 +74,9 @@ class EgyBest : MainAPI() {
         "$mainUrl/trending/?page=" to "الأفلام الأكثر مشاهدة",
         "$mainUrl/movies/?page=" to "أفلام جديدة",
         "$mainUrl/tv/?page=" to "مسلسلات جديدة ",
-        "$mainUrl/tv/korean?page=" to "الدراما الكورية ",
         "$mainUrl/animes/popular?page=" to "مسلسلات الانمي",
-        "$mainUrl/wwe/?page=" to "عروض المصارعة ",
-        "$mainUrl/movies/latest-bluray-2020-2019?page=" to "أفلام جديدة BluRay",
-        "$mainUrl/masrahiyat/?page=" to "مسرحيات ",
         "$mainUrl/movies/latest?page=" to "أحدث الاضافات",
-        "$mainUrl/movies/comedy?page=" to "أفلام كوميدية",
-        "$mainUrl/explore/?q=superhero/" to "أفلام سوبر هيرو",
-        "$mainUrl/movies/animation?page=" to "أفلام انمي و كرتون",
-        "$mainUrl/movies/romance?page=" to "أفلام رومانسية",
-        "$mainUrl/movies/drama?page=" to "أفلام دراما",
-        "$mainUrl/movies/horror?page=" to "أفلام رعب",
-        "$mainUrl/movies/documentary?page=" to "أفلام وثائقية",
-        "$mainUrl/World-War-Movies/?page=" to "أفلام عن الحرب العالمية ☢",
-        "$mainUrl/End-Of-The-World-Movies/?page=" to "أفلام عن نهاية العالم",
-        "$mainUrl/movies/arab?page=" to "أفلام عربية ",
+
     )
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
